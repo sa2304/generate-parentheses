@@ -26,6 +26,7 @@ class Solution {
  public:
   vector<string> generateParenthesis(int n) {
     string s{"("s};
+    s.reserve(n * 2);
     int opened = 1;
     vector<string> result;
     generateInternal(s, opened, 0, n, result);
